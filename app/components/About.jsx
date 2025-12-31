@@ -34,7 +34,7 @@ export default function About() {
           <div className="relative">
             <div className="absolute inset-0 bg-pink-300/30 rounded-3xl blur-2xl" />
             <div className="relative rounded-full bg-gradient-to-tr from-pink-400 via-pink-300 to-pink-500 p-1">
-              <img src="/profile.JPG" alt="Rhena Tabella" className="w-64 h-64 object-cover rounded-full bg-white" />
+              <img src="/Profile.JPG" alt="Rhena Tabella" className="w-64 h-64 object-cover rounded-full bg-white" />
             </div>
           </div>
         </div>
