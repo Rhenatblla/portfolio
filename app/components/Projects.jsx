@@ -6,10 +6,11 @@ const projects = [
   {
     title: "Grapholyze",
     role: "AI Handwriting Analysis Web",
-    status: "On Going",
+    status: "Completed",
     description:
-      "Grapholyze AI adalah pengembangan sistem berbasis kecerdasan buatan (AI) yang mampu menganalisis tulisan tangan seseorang dengan cepat, akurat, dan objektif. Proyek ini bertujuan untuk menjembatani kebutuhan masyarakat, institusi pendidikan, perusahaan, maupun lembaga psikologi dalam melakukan penilaian kepribadian, potensi, atau kecenderungan perilaku melalui analisis grafologi yang modern dan efisien.",
+      "Grapholyze AI merupakan aplikasi berbasis web yang dikembangkan untuk menganalisis citra tulisan tangan dan memberikan gambaran kepribadian melalui pendekatan grafologi dan tes Enneagram. Sistem ini memungkinkan pengguna mengunggah sampel tulisan tangan, melakukan tes Enneagram, serta memperoleh hasil analisis yang disajikan melalui antarmuka yang interaktif dan mudah digunakan.",
     images: ["/projects/grapholyze/1.jpeg", "/projects/grapholyze/2.jpeg", "/projects/grapholyze/3.jpeg", "/projects/grapholyze/4.jpeg"],
+    uiLink: "https://grapholyze.vercel.app",
   },
   {
     title: "UI Web PPID BNPB",
@@ -83,23 +84,23 @@ function ProjectCard({ project }) {
 
           <p className="text-sm text-pink-500 mt-1 font-medium">{project.role}</p>
 
-          <p className="mt-3 text-sm text-gray-600 leading-relaxed">{project.description}</p>
+          <p className="mt-3 text-sm text-gray-600 leading-relaxed text-justify">{project.description}</p>
 
-          {/* 🔗 AUTO-DETECT UI LINK */}
+          {/* 🔗 PROJECT LINK */}
           {project.uiLink && (
             <a href={project.uiLink} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-medium hover:underline transition">
-              {project.uiLink.includes("figma.com") && (
+              {project.uiLink.includes("figma.com") ? (
                 <>
                   <Figma size={16} className="text-blue-600" />
                   <span className="text-blue-600">UI Web Design (Figma)</span>
                 </>
-              )}
-
-              {project.uiLink.includes("instagram.com") && (
+              ) : project.uiLink.includes("instagram.com") ? (
                 <>
                   <Instagram size={16} className="text-pink-500" />
                   <span className="text-pink-500">Documentation (Instagram)</span>
                 </>
+              ) : (
+                <span className="text-pink-500">View Website ↗</span>
               )}
             </a>
           )}

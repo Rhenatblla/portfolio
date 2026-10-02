@@ -11,7 +11,7 @@ export default function Hero() {
         Hi, I’m <span className="text-pink-500">Rhena</span> 👋
       </h2>
 
-      <p className="mt-6 max-w-2xl text-gray-600 text-lg">Mahasiswa Teknik Informatika | Front-End Developer Enthusiast | UI/UX Enthusiast Menciptakan pengalaman digital yang menarik dan berkualitas.</p>
+      <p className="mt-6 max-w-2xl text-gray-600 text-lg">Informatics Engineering Graduate | Quality Assurance & Software Testing | Manual Testing & UAT | Web Development | API & UI/UX.</p>
 
       <div className="mt-10 flex gap-4">
         {/* View Projects */}
